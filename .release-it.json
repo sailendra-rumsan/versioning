@@ -8,6 +8,9 @@
     "release": true,
     "releaseName": "Release v${version}"
   },
+  "npm": {
+    "publish": false
+  },
   "hooks": {
     "after:bump": "npx auto-changelog -p"
   }
