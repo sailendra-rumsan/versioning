@@ -8,16 +8,7 @@
     "release": true,
     "releaseName": "Release v${version}"
   },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "infile": "CHANGELOG.md",
-      "header": "# Changelog",
-      "preset": {
-        "name": "conventionalcommits"
-      }
-    }
-  },
-  "npm": {
-    "publish": false
+  "hooks": {
+    "after:bump": "npx auto-changelog -p"
   }
 }
